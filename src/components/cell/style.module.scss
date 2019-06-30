@@ -1,0 +1,44 @@
+@import "../../styles/vars";
+
+.board-cell {
+  $thick: 4px;
+  $clr: #770027;
+
+  position: relative;
+  background-color: $g-board-clr;
+
+  &:hover {
+    background-color: darken($g-board-clr, 5%);
+  }
+
+  &.x::before,
+  &.x::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: $thick;
+    border-radius: 2px;
+    background-color: $clr;
+    top: calc(50% - #{$thick} / 2);
+  }
+
+  &.x::before {
+    transform: rotate(45deg);
+  }
+
+  &.x::after {
+    transform: rotate(-45deg);
+  }
+
+  &.o::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: $thick solid $clr;
+    transform: translate(-50%, -50%);
+  }
+}

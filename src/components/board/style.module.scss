@@ -1,0 +1,19 @@
+@import "../../styles/vars";
+
+.board {
+  --dimension: repeat(var(--board-size), 1fr);
+
+  display: grid;
+  grid-template: var(--dimension) / var(--dimension);
+  grid-gap: .2em;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 .2em $g-bg-clr, 0 0 0 .4em $g-board-clr;
+
+  &-container {
+    $size: 75vmin;
+    position: relative;
+    width: $size;
+    height: $size;
+  }
+}

@@ -1,0 +1,29 @@
+.title {
+  margin-top: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.board-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  p {
+    margin: 0 0 1em;
+  }
+
+  button + button {
+    margin-left: 1rem;
+  }
+
+  @media (min-width: 480px) {
+    flex-direction: initial;
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+:root {
+  --board-size: 1;
+  background-color: $g-bg-clr;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  color: #1f1f1f;
+}
+
+#root {
+	display: grid;
+	height: 100vh;
+}
+
+.container {
+	margin: auto;
+}
+
+button {
+  $bgc: #ffa479;
+  $y-offst: .15em;
+
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: $bgc;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 $y-offst 0 0 darken($bgc, 30%);
+
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  &:hover, &:focus {
+    background-color: darken($bgc, 2%);
+  }
+
+  &:active {
+    transform: translateY($y-offst);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: #545454;
+    background-color: #d8d8d8;
+    box-shadow: 0 $y-offst 0 0 #989898;
+  }
+}
+
