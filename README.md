@@ -6,4 +6,4 @@
 ### Run locally:
 1. Clone the repo
 2. cd `tic-tac-toe-react`
-3. `yarn start`
+3. `yarn && yarn start`
