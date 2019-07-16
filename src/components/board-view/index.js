@@ -24,7 +24,6 @@ const BoardView = ({
       <div>
         <button onClick={onGameFinish}>Finish game</button>
         <button
-          className={s.reset}
           onClick={onRestart}
           disabled={isFirstMove}
         >

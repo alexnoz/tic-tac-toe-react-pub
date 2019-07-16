@@ -4,7 +4,7 @@ import s from './style.module.scss';
 
 export default function VictoryLine({ line, boxSize: size }) {
   const normalizedLine = Object.keys(line).reduce(
-    (o, c) => (o[c] = line[c] + 0.5) && o,
+    (o, c) => ({ ...o, [c]: line[c] + 0.5 }),
     {},
   );
 
